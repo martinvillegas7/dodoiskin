@@ -53,7 +53,7 @@ export default function FAQSection() {
                 <span className="font-semibold text-foreground text-left">{faq.question}</span>
                 <ChevronDown
                   size={20}
-                  className={`text-primary transition-transform ${openIndex === idx ? "rotate-180" : ""}`}
+                  className={`text-[#1f2937] transition-transform ${openIndex === idx ? "rotate-180" : ""}`}
                 />
               </button>
 

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -10,7 +10,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">do do i</h3>
-            <p className="text-sm text-background/80">Skincare coreano original para tu rutina diaria.</p>
+            <p className="text-sm text-background/80">
+              Skincare coreano original para tu rutina diaria.
+            </p>
           </div>
 
           {/* Links */}
@@ -18,7 +20,10 @@ export default function Footer() {
             <h4 className="font-semibold">Navegación</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#productos" className="hover:text-primary transition">
+                <Link
+                  href="#productos"
+                  className="hover:text-[#1f2937] transition"
+                >
                   Productos
                 </Link>
               </li>
@@ -41,20 +46,20 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="https://instagram.com/dodoiskin"
+                  href="https://instagram.com/dodo_iskin"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition"
+                  className="hover:text-[#1f2937] transition"
                 >
                   Instagram
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/+573127114622"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition"
+                  className="hover:text-[#1f2937] transition"
                 >
                   WhatsApp
                 </a>
@@ -68,15 +73,15 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/+573127114622"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition"
+                  className="hover:text-[#1f2937] transition"
                 >
                   Escríbenos por WhatsApp
                 </a>
               </li>
-              <li>Email: hola@dodoi.com</li>
+              <li>Email: dodoiskincare1009@gmail.com</li>
             </ul>
           </div>
         </div>
@@ -87,5 +92,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

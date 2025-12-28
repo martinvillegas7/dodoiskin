@@ -1,11 +1,12 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X, Search } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, Search } from "lucide-react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border">
@@ -17,17 +18,35 @@ export default function Header() {
       <div className="px-4 md:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold tracking-tight text-foreground">do do i</div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="do do i logo"
+              width={90}
+              height={24}
+              className="h-4 md:h-6 lg:h-8 w-auto"
+              priority
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="#productos" className="text-sm text-foreground hover:text-primary transition">
+            <Link
+              href="#productos"
+              className="text-sm text-foreground hover:text-[#1f2937] transition"
+            >
               Productos
             </Link>
-            <Link href="#sobre" className="text-sm text-foreground hover:text-primary transition">
+            <Link
+              href="#sobre"
+              className="text-sm text-foreground hover:text-[#1f2937] transition"
+            >
               Sobre nosotros
             </Link>
-            <Link href="#faq" className="text-sm text-foreground hover:text-primary transition">
+            <Link
+              href="#faq"
+              className="text-sm text-foreground hover:text-[#1f2937] transition"
+            >
               Preguntas
             </Link>
           </nav>
@@ -38,16 +57,19 @@ export default function Header() {
               <Search size={20} className="text-foreground" />
             </button>
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/+573127114622"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-medium hover:opacity-90 transition"
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-medium hover:bg-[#DADDE3] transition"
             >
               Escribir
             </a>
 
             {/* Mobile Menu Button */}
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2"
+            >
               {isMenuOpen ? (
                 <X size={24} className="text-foreground" />
               ) : (
@@ -60,18 +82,27 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-4 flex flex-col gap-4 pb-4">
-            <Link href="#productos" className="text-sm text-foreground hover:text-primary transition">
+            <Link
+              href="#productos"
+              className="text-sm text-foreground hover:text-[#1f2937] transition"
+            >
               Productos
             </Link>
-            <Link href="#sobre" className="text-sm text-foreground hover:text-primary transition">
+            <Link
+              href="#sobre"
+              className="text-sm text-foreground hover:text-[#1f2937] transition"
+            >
               Sobre nosotros
             </Link>
-            <Link href="#faq" className="text-sm text-foreground hover:text-primary transition">
+            <Link
+              href="#faq"
+              className="text-sm text-foreground hover:text-[#1f2937] transition"
+            >
               Preguntas
             </Link>
           </nav>
         )}
       </div>
     </header>
-  )
+  );
 }
