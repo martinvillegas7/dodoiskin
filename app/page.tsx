@@ -8,6 +8,7 @@ import ProductsSection from "@/components/products-section";
 import HowToBuySection from "@/components/how-to-buy-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import FAQSection from "@/components/faq-section";
+import SectionWrapper from "@/components/section-wrapper";
 // import Newsletter from "@/components/newsletter";
 import Footer from "@/components/footer";
 
@@ -16,14 +17,30 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
-      <ProductsSection />
-      <AboutSection />
-      <VisualBlocks />
-      <PhilosophySection />
-      <BenefitsSection />
-      <HowToBuySection />
-      <TestimonialsSection />
-      <FAQSection />
+      <SectionWrapper>
+        <ProductsSection />
+      </SectionWrapper>
+      <SectionWrapper delay={100}>
+        <AboutSection />
+      </SectionWrapper>
+      <SectionWrapper delay={200}>
+        <VisualBlocks />
+      </SectionWrapper>
+      <SectionWrapper delay={100}>
+        <PhilosophySection />
+      </SectionWrapper>
+      <SectionWrapper delay={200}>
+        <BenefitsSection />
+      </SectionWrapper>
+      <SectionWrapper delay={100}>
+        <HowToBuySection />
+      </SectionWrapper>
+      <SectionWrapper delay={200}>
+        <TestimonialsSection />
+      </SectionWrapper>
+      <SectionWrapper delay={100}>
+        <FAQSection />
+      </SectionWrapper>
       {/* <Newsletter /> */}
       <Footer />
     </div>

@@ -1,12 +1,33 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Search } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isProductPage = pathname?.startsWith("/productos/");
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        const headerOffset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border">
@@ -30,26 +51,31 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link
-              href="#productos"
-              className="text-sm text-foreground hover:text-[#1f2937] transition"
-            >
-              Productos
-            </Link>
-            <Link
-              href="#sobre"
-              className="text-sm text-foreground hover:text-[#1f2937] transition"
-            >
-              Sobre nosotros
-            </Link>
-            <Link
-              href="#faq"
-              className="text-sm text-foreground hover:text-[#1f2937] transition"
-            >
-              Preguntas
-            </Link>
-          </nav>
+          {!isProductPage && (
+            <nav className="hidden md:flex items-center gap-8">
+              <Link
+                href="#productos"
+                onClick={(e) => handleSmoothScroll(e, "#productos")}
+                className="text-sm text-foreground hover:text-[#1f2937] transition"
+              >
+                Productos
+              </Link>
+              <Link
+                href="#sobre"
+                onClick={(e) => handleSmoothScroll(e, "#sobre")}
+                className="text-sm text-foreground hover:text-[#1f2937] transition"
+              >
+                Sobre nosotros
+              </Link>
+              <Link
+                href="#faq"
+                onClick={(e) => handleSmoothScroll(e, "#faq")}
+                className="text-sm text-foreground hover:text-[#1f2937] transition"
+              >
+                Preguntas
+              </Link>
+            </nav>
+          )}
 
           {/* Actions */}
           <div className="flex items-center gap-4">
@@ -80,22 +106,25 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {isMenuOpen && !isProductPage && (
           <nav className="md:hidden mt-4 flex flex-col gap-4 pb-4">
             <Link
               href="#productos"
+              onClick={(e) => handleSmoothScroll(e, "#productos")}
               className="text-sm text-foreground hover:text-[#1f2937] transition"
             >
               Productos
             </Link>
             <Link
               href="#sobre"
+              onClick={(e) => handleSmoothScroll(e, "#sobre")}
               className="text-sm text-foreground hover:text-[#1f2937] transition"
             >
               Sobre nosotros
             </Link>
             <Link
               href="#faq"
+              onClick={(e) => handleSmoothScroll(e, "#faq")}
               className="text-sm text-foreground hover:text-[#1f2937] transition"
             >
               Preguntas
