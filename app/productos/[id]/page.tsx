@@ -86,7 +86,7 @@ export default function ProductDetailPage() {
                   <div
                     className="relative w-full h-full"
                     style={{
-                      transform: isZooming ? "scale(2.5)" : "scale(1)",
+                      transform: isZooming ? "scale(1.5)" : "scale(1)",
                       transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`,
                       transition: "transform 0.1s ease-out",
                     }}
@@ -106,14 +106,14 @@ export default function ProductDetailPage() {
                   <>
                     <button
                       onClick={prevImage}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-foreground p-2 rounded-full shadow-lg transition-opacity opacity-0 group-hover:opacity-100"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-foreground p-2 rounded-full shadow-lg transition-opacity opacity-100 cursor-pointer"
                       aria-label="Imagen anterior"
                     >
                       <ChevronLeft size={24} />
                     </button>
                     <button
                       onClick={nextImage}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-foreground p-2 rounded-full shadow-lg transition-opacity opacity-0 group-hover:opacity-100"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-foreground p-2 rounded-full shadow-lg transition-opacity opacity-100 cursor-pointer"
                       aria-label="Imagen siguiente"
                     >
                       <ChevronRight size={24} />

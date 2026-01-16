@@ -18,8 +18,8 @@ export const products: Product[] = [
     image: "/skin1004-cleanser-centella-light-cleansing-oil.jpg",
     images: [
       "/skin1004-cleanser-centella-light-cleansing-oil.jpg",
-      "/skin1004-cleanser-centella-light-cleansing-oil.jpg",
-      "/skin1004-tea-trica-bha-foam.png",
+      "/skin1004-cleanser-centella-light-cleansing-oil-2.jpg",
+      "/skin1004-cleanser-centella-light-cleansing-oil-3.jpg",
     ],
   },
   {
@@ -29,6 +29,11 @@ export const products: Product[] = [
     description: "Piel con imperfecciones, con BHA",
     price: "$75.000",
     image: "/skin1004-tea-trica-bha-foam.png",
+    images: [
+      "/skin1004-tea-trica-bha-foam.png",
+      "/skin1004-tea-trica-bha-foam-2.jpg",
+      "/skin1004-tea-trica-bha-foam-3.png",
+    ],
   },
   {
     id: 3,
@@ -38,6 +43,11 @@ export const products: Product[] = [
     price: "$91.900",
     image:
       "/skin1004-ampoule-serum-210ml-coming-soon-tea-trica-purifying-toner.png",
+    images: [
+      "/skin1004-ampoule-serum-210ml-coming-soon-tea-trica-purifying-toner.png",
+      "/skin1004-toner-210ml-tea-trica-purifying-toner-2.jpg",
+      "/skin1004-toner-210ml-tea-trica-purifying-toner-3.png",
+    ],
   },
   {
     id: 4,
@@ -46,6 +56,11 @@ export const products: Product[] = [
     description: "Piel con poros, clarificante",
     price: "$86.800",
     image: "/skin1004-toner-poremizing-clear-toner.png",
+    images: [
+      "/skin1004-toner-poremizing-clear-toner.png",
+      "/skin1004-toner-210ml-coming-soon-poremizing-clear-toner-2.png",
+      "/skin1004-toner-210ml-coming-soon-poremizing-clear-toner-3.png",
+    ],
   },
   {
     id: 5,
@@ -54,6 +69,11 @@ export const products: Product[] = [
     description: "Contorno de ojos, con bakuchiol",
     price: "$84.800",
     image: "/skin1004-cream-probio-cica-bakuchiol-eye-cream.png",
+    images: [
+      "/skin1004-cream-probio-cica-bakuchiol-eye-cream.png",
+      "/skin1004-cream-probio-cica-bakuchiol-eye-cream-2.png",
+      "/skin1004-cream-probio-cica-bakuchiol-eye-cream-3.png",
+    ],
   },
   {
     id: 6,
@@ -62,5 +82,10 @@ export const products: Product[] = [
     description: "Piel con poros, mascarilla en stick",
     price: "$86.400",
     image: "/skin1004-poremizing-quick-clay-stick-mask.jpg",
+    images: [
+      "/skin1004-poremizing-quick-clay-stick-mask.jpg",
+      "/skin1004-poremizing-quick-clay-stick-mask-2.jpg",
+      "/skin1004-poremizing-quick-clay-stick-mask-3.jpg",
+    ],
   },
 ];
