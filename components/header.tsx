@@ -42,7 +42,7 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
-              alt="do do i logo"
+              alt="DO DO I logo"
               width={90}
               height={24}
               className="h-4 md:h-6 lg:h-8 w-auto"

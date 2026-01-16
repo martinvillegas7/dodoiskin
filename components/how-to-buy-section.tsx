@@ -35,7 +35,7 @@ export default function HowToBuySection() {
           {steps.map((step, idx) => (
             <div key={idx} className="relative space-y-4">
               {/* Step number */}
-              <div className="text-5xl font-bold text-primary/20">
+              <div className="text-5xl font-bold text-muted-foreground">
                 {step.number}
               </div>
 

@@ -6,7 +6,7 @@ export default function AboutSection() {
       <div className="max-w-3xl mx-auto text-center space-y-12">
         <div className="space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Sobre do do i
+            Sobre DO DO I
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Somos una marca enfocada en traer skincare coreano original y de

@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">do do i</h3>
+            <h3 className="text-2xl font-bold">DO DO I</h3>
             <p className="text-sm text-background/80">
               Skincare coreano original para tu rutina diaria.
             </p>
@@ -88,7 +88,7 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-background/20 pt-8 text-center text-sm text-background/70">
-          <p>© 2025 do do i. Todos los derechos reservados.</p>
+          <p>© 2025 DO DO I. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

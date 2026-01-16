@@ -20,7 +20,7 @@ export default function TestimonialsSection() {
       name: "Martín Villegas",
       type: "Piel grasa",
       comment:
-        "Creía que skincare no era para mí hasta que probé do do i. Ahora es mi ritual diario.",
+        "Creía que skincare no era para mí hasta que probé DO DO I. Ahora es mi ritual diario.",
       rating: 5,
     },
   ];
